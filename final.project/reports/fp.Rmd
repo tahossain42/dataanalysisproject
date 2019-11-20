@@ -15,6 +15,7 @@ library(dplyr)
 library(plotrix)
 library(readr)
 library(knitrBootstrap)
+library(knitr)
 
 
 
@@ -214,7 +215,14 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 ```
 
 ## Key Points
-```{r}
+```{r echo = FALSE}
+cse1 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-1_enrolments.csv")
+cse2 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-2_enrolments.csv")
+cse3 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-3_enrolments.csv")
+cse4 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-4_enrolments.csv")
+cse5 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-5_enrolments.csv")
+cse6 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-6_enrolments.csv")
+cse7 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-7_enrolments.csv")
 list1 <- list(9607,10307,10392,5788,5268)
 list2 <- list(756, 1054, 848, 508, 243)
 Run <- list(3,4,5,6,7)
@@ -230,6 +238,25 @@ main="Total number of downloads throughout each run",
 ylab="",
 type="l",
 col="red")
+
+n1 <- nrow(cse1)
+n2 <- nrow(cse2)
+n3 <- nrow(cse3)
+n4 <- nrow(cse4)
+n5 <- nrow(cse5)
+n6 <- nrow(cse6)
+n7 <- nrow(cse7)
+
+p <- list(n1,n2,n3,n4,n,n6,n7)
+q <- list(1:7)
+
+plot(Run, list2,
+main="Total participants",
+ylab="Participants",
+xlab = "Run",
+type="l",
+col="red")
+
 ```
 
 
