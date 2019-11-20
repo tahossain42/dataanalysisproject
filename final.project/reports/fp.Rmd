@@ -1,0 +1,71 @@
+---
+title: "Final Project"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir= normalizePath('..'))
+library(ggplot2)
+library(dplyr)
+library(plotrix)
+library(readr)
+
+
+```
+
+
+# Test header {.tabset}
+## Including tables
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+## Plots
+There are in total 13 videos. 
+
+
+```{r echo=FALSE}
+vidstats <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-7_video-stats.csv")
+Steps <- vidstats$step_position
+b <- vidstats$total_downloads
+c <- vidstats$total_views
+par(mfrow=c(1,2))
+plot(Steps, b,
+main="Downloads of videos",
+ylab="",
+type="l",
+col="blue")
+
+plot(Steps, c,
+main="Total views of videos",
+ylab="",
+type="l",
+col="red")
+
+slices <- c(59.59,	4.12,	20.21,	6.69,	2.96,	5.79) 
+lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels 
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices,labels = lbls, col=rainbow(length(lbls)),
+   main="Pie Chart of Countries")
+
+
+```
+```{r}
+plot(x, sin(x),
+main="Overlaying Graphs",
+ylab="",
+type="l",
+col="blue")
+lines(x,cos(x), col="red")
+legend("topleft",
+c("sin(x)","cos(x)"),
+fill=c("blue","red")
+)
+```
+
+
+
+
