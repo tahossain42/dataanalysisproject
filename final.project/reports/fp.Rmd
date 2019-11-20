@@ -2,7 +2,9 @@
 title: "Final Project"
 output:
   html_document: default
-  pdf_document: default
+  toc: true
+  toc_flot: true
+  theme: darkly
 ---
 
 ```{r setup, include=FALSE, echo=FALSE}
@@ -21,15 +23,100 @@ library(readr)
 ## Including tables
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-## Plots
-There are in total 13 videos. 
+## Run 3
+```{r}
+vidstats3 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-3_video-stats.csv")
+Steps <- vidstats3$step_position
+b <- vidstats3$total_downloads
+c <- vidstats3$total_views
+par(mfrow=c(1,2))
+plot(Steps, b,
+main="Downloads of videos",
+ylab="",
+type="l",
+col="blue")
+
+plot(Steps, c,
+main="Total views of videos",
+ylab="",
+type="l",
+col="red")
+
+slices <- c(59.59,	4.12,	20.21,	6.69,	2.96,	5.79) 
+lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels 
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices,labels = lbls, col=rainbow(length(lbls)),
+   main="Pie Chart of Countries")
+
+```
+
+## Run 4
+```{r}
 
 
+
+vidstats4 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-4_video-stats.csv")
+Steps <- vidstats4$step_position
+b <- vidstats4$total_downloads
+c <- vidstats4$total_views
+par(mfrow=c(1,2))
+plot(Steps, b,
+main="Downloads of videos",
+ylab="",
+type="l",
+col="blue")
+
+plot(Steps, c,
+main="Total views of videos",
+ylab="",
+type="l",
+col="red")
+
+slices <- c(59.59,	4.12,	20.21,	6.69,	2.96,	5.79) 
+lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels 
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices,labels = lbls, col=rainbow(length(lbls)),
+   main="Pie Chart of Countries")
+```
+
+## Run 5
 ```{r echo=FALSE}
-vidstats <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-7_video-stats.csv")
-Steps <- vidstats$step_position
-b <- vidstats$total_downloads
-c <- vidstats$total_views
+vidstats5 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-5_video-stats.csv")
+Steps <- vidstats5$step_position
+b <- vidstats5$total_downloads
+c <- vidstats5$total_views
+par(mfrow=c(1,2))
+plot(Steps, b,
+main="Downloads of videos",
+ylab="",
+type="l",
+col="blue")
+
+plot(Steps, c,
+main="Total views of videos",
+ylab="",
+type="l",
+col="red")
+
+slices <- c(59.59,	4.12,	20.21,	6.69,	2.96,	5.79) 
+lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels 
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices,labels = lbls, col=rainbow(length(lbls)),
+   main="Pie Chart of Countries")
+```
+
+## Run 6
+```{r echo=FALSE}
+vidstats6 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-6_video-stats.csv")
+Steps <- vidstats6$step_position
+b <- vidstats6$total_downloads
+c <- vidstats6$total_views
 par(mfrow=c(1,2))
 plot(Steps, b,
 main="Downloads of videos",
@@ -53,18 +140,38 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 
 
 ```
-```{r}
-plot(x, sin(x),
-main="Overlaying Graphs",
+
+## Run 7
+There are in total 13 videos. Total num
+```{r echo=FALSE}
+vidstats7 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-7_video-stats.csv")
+Steps <- vidstats7$step_position
+b <- vidstats7$total_downloads
+c <- vidstats7$total_views
+par(mfrow=c(1,2))
+plot(Steps, b,
+main="Downloads of videos",
 ylab="",
 type="l",
 col="blue")
-lines(x,cos(x), col="red")
-legend("topleft",
-c("sin(x)","cos(x)"),
-fill=c("blue","red")
-)
+
+plot(Steps, c,
+main="Total views of videos",
+ylab="",
+type="l",
+col="red")
+
+slices <- c(59.59,	4.12,	20.21,	6.69,	2.96,	5.79) 
+lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels 
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices,labels = lbls, col=rainbow(length(lbls)),
+   main="Pie Chart of Countries")
+
+
 ```
+
 
 
 
