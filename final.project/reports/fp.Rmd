@@ -1,10 +1,10 @@
 ---
-title: "Final Project"
+title: "Analysis of video data from each run "
 output:
-  html_document: default
-  toc: true
-  toc_flot: true
-  theme: darkly
+  rmarkdown::html_document:
+    theme: darkly
+    fig_width: 10
+    fig_height: 4
 ---
 
 ```{r setup, include=FALSE, echo=FALSE}
@@ -14,18 +14,28 @@ library(ggplot2)
 library(dplyr)
 library(plotrix)
 library(readr)
+library(knitrBootstrap)
+
 
 
 ```
 
 
-# Test header {.tabset}
-## Including tables
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
+#  {.tabset}
+## Introduction
+Things which is been analysed throughout the project: </br>
+  <ol>
+   <li> Total views </li>
+   <li> Total downloads </li>
+   <li> Participants </li> 
+   <li> Key factor derived from the data </br>
+</ol>
 ## Run 3
+
+In run 3, total number of views is  9607 and total number of downloads 756
 ```{r}
 vidstats3 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-3_video-stats.csv")
+tv <- sum(vidstats3$total_views)
 Steps <- vidstats3$step_position
 b <- vidstats3$total_downloads
 c <- vidstats3$total_views
@@ -51,7 +61,7 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
    main="Pie Chart of Countries")
 
 ```
-
+ 
 ## Run 4
 ```{r}
 
@@ -172,7 +182,7 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 
 ```
 
-
+## Key Points
 
 
 
