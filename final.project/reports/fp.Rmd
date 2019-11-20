@@ -22,6 +22,8 @@ library(knitrBootstrap)
 
 
 #  {.tabset}
+
+
 ## Introduction
 Things which is been analysed throughout the project: </br>
   <ol>
@@ -30,9 +32,27 @@ Things which is been analysed throughout the project: </br>
    <li> Participants </li> 
    <li> Key factor derived from the data </br>
 </ol>
+## Video Titles
+
+  1.1 Welcome to the course video <br>
+  <font color="yellow">1.5 Privacy online and offline video </font> <br>
+ 1.14 Why would anyone want your data? <br>
+ 1.17 Preserving privacy in cloud storage: privacy by design video <br>
+ 1.19 Staying safe online: personal perspectives video <br>
+  2.1 Welcome to Week 2: payment security<br>
+  2.4	The evolving arms race of payment security<br>
+ 2.11 Exploring vulnerabilities in online payments<br>
+ 2.17 The million dollar contactless payment<br>
+  3.1	Welcome to Week 3: security in the future home<br>
+  3.2	Devices in the future home<br>
+ 3.14	Exploring security: biometric authentication<br>
+ 3.15	Exploring security: the Access Control Live Lab<br>
+  
 ## Run 3
 
-In run 3, total number of views is  9607 and total number of downloads 756
+ <b> Total number of views is <font color="green"> 9607 </font></b> <br>
+ <b> Total number of downloads <font color="green"> 756 </font></b><br>
+
 ```{r}
 vidstats3 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-3_video-stats.csv")
 tv <- sum(vidstats3$total_views)
@@ -63,10 +83,11 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 ```
  
 ## Run 4
+
+<b> Total number of views is <font color="green"> 10307 </font></b> <br>
+ <b> Total number of downloads <font color="green"> 1054 </font></b><br>
+ 
 ```{r}
-
-
-
 vidstats4 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-4_video-stats.csv")
 Steps <- vidstats4$step_position
 b <- vidstats4$total_downloads
@@ -94,6 +115,10 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 ```
 
 ## Run 5
+
+<b> Total number of views is <font color="green"> 10392 </font></b> <br>
+ <b> Total number of downloads <font color="green"> 848 </font></b><br>
+ 
 ```{r echo=FALSE}
 vidstats5 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-5_video-stats.csv")
 Steps <- vidstats5$step_position
@@ -122,6 +147,10 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 ```
 
 ## Run 6
+
+<b> Total number of views is <font color="green"> 5788 </font></b> <br>
+ <b> Total number of downloads <font color="green"> 508 </font></b><br>
+ 
 ```{r echo=FALSE}
 vidstats6 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-6_video-stats.csv")
 Steps <- vidstats6$step_position
@@ -152,7 +181,10 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 ```
 
 ## Run 7
-There are in total 13 videos. Total num
+
+<b> Total number of views is <font color="green"> 5268 </font></b> <br>
+ <b> Total number of downloads <font color="green"> 243 </font></b><br>
+
 ```{r echo=FALSE}
 vidstats7 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-7_video-stats.csv")
 Steps <- vidstats7$step_position
@@ -179,10 +211,29 @@ lbls <- paste(lbls,"%",sep="") # ad % to labels
 pie(slices,labels = lbls, col=rainbow(length(lbls)),
    main="Pie Chart of Countries")
 
-
 ```
 
 ## Key Points
+```{r}
+list1 <- list(9607,10307,10392,5788,5268)
+list2 <- list(756, 1054, 848, 508, 243)
+Run <- list(3,4,5,6,7)
+par(mfrow=c(1,2))
+plot(Run, list1,
+main="Total viewers throughout the run",
+ylab="",
+type="l",
+col="blue")
+
+plot(Run, list2,
+main="Total number of downloads throughout each run",
+ylab="",
+type="l",
+col="red")
+```
+
+
+
 
 
 
