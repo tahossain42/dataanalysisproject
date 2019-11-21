@@ -8,8 +8,11 @@ output:
 ---
 
 ```{r setup, include=FALSE, echo=FALSE}
+# setup for rmd
 knitr::opts_chunk$set(echo = FALSE)
 knitr::opts_knit$set(root.dir= normalizePath('..'))
+
+# library
 library(ggplot2)
 library(dplyr)
 library(plotrix)
@@ -55,11 +58,14 @@ Things which is been analysed throughout the project: </br>
  <b> Total number of downloads <font color="green"> 756 </font></b><br>
 
 ```{r}
+# run 3, loading data and necessary output
 vidstats3 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-3_video-stats.csv")
-tv <- sum(vidstats3$total_views)
+tv <- sum(vidstats3$viewed_onehundred_percent)
 Steps <- vidstats3$step_position
 b <- vidstats3$total_downloads
 c <- vidstats3$total_views
+
+# plot 1
 par(mfrow=c(1,2))
 plot(Steps, b,
 main="Downloads of videos",
@@ -67,12 +73,14 @@ ylab="",
 type="l",
 col="blue")
 
+#plot 2
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
 pch=19,
 col="red")
 
+# calculation for pie chart
 avg1 = mean(vidstats3$europe_views_percentage)
 avg2 = mean(vidstats3$oceania_views_percentage)
 avg3 = mean(vidstats3$asia_views_percentage)
@@ -80,6 +88,8 @@ avg4 = mean(vidstats3$north_america_views_percentage)
 avg5 = mean(vidstats3$south_america_views_percentage)
 avg6 = mean(vidstats3$africa_views_percentage)
 avg7 = mean(vidstats3$antarctica_views_percentage)
+
+# pie chart
 slices <- c(avg1,	avg2,	avg3,	avg4,	avg5,	avg6, avg7)
 lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa","Antarctica")
 pct <- round(slices/sum(slices)*100)
@@ -95,10 +105,13 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
  <b> Total number of downloads <font color="green"> 1054 </font></b><br>
  
 ```{r}
+# run 4 
 vidstats4 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-4_video-stats.csv")
 Steps <- vidstats4$step_position
 b <- vidstats4$total_downloads
 c <- vidstats4$total_views
+
+# plot 1
 par(mfrow=c(1,2))
 plot(Steps, b,
 main="Downloads of videos",
@@ -106,12 +119,14 @@ ylab="",
 type="l",
 col="blue")
 
+# plot 2
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
 pch=19,
 col="red")
 
+# calculation for pie chart
 avg1 = mean(vidstats4$europe_views_percentage)
 avg2 = mean(vidstats4$oceania_views_percentage)
 avg3 = mean(vidstats4$asia_views_percentage)
@@ -119,6 +134,8 @@ avg4 = mean(vidstats4$north_america_views_percentage)
 avg5 = mean(vidstats4$south_america_views_percentage)
 avg6 = mean(vidstats4$africa_views_percentage)
 avg7 = mean(vidstats4$antarctica_views_percentage)
+
+# pie chart
 slices <- c(avg1,	avg2,	avg3,	avg4,	avg5,	avg6, avg7)
 lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa","Antarctica") 
 pct <- round(slices/sum(slices)*100)
@@ -134,23 +151,29 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
  <b> Total number of downloads <font color="green"> 848 </font></b><br>
  
 ```{r echo=FALSE}
+
+# run 5
 vidstats5 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-5_video-stats.csv")
 Steps <- vidstats5$step_position
 b <- vidstats5$total_downloads
 c <- vidstats5$total_views
 par(mfrow=c(1,2))
+
+# plot 1
 plot(Steps, b,
 main="Downloads of videos",
 ylab="",
 type="l",
 col="blue")
 
+# plot 2
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
 pch=19,
 col="red")
 
+# calculation for pie chart
 avg1 = mean(vidstats5$europe_views_percentage)
 avg2 = mean(vidstats5$oceania_views_percentage)
 avg3 = mean(vidstats5$asia_views_percentage)
@@ -158,6 +181,8 @@ avg4 = mean(vidstats5$north_america_views_percentage)
 avg5 = mean(vidstats5$south_america_views_percentage)
 avg6 = mean(vidstats5$africa_views_percentage)
 avg7 = mean(vidstats5$antarctica_views_percentage)
+
+# pie chart
 slices <- c(avg1,	avg2,	avg3,	avg4,	avg5,	avg6, avg7)
 lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa","Antarctica")
 pct <- round(slices/sum(slices)*100)
@@ -173,23 +198,28 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
  <b> Total number of downloads <font color="green"> 508 </font></b><br>
  
 ```{r echo=FALSE}
+# run 6
 vidstats6 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-6_video-stats.csv")
 Steps <- vidstats6$step_position
 b <- vidstats6$total_downloads
 c <- vidstats6$total_views
 par(mfrow=c(1,2))
+
+# plot 6
 plot(Steps, b,
 main="Downloads of videos",
 ylab="",
 type="l",
 col="blue")
 
+#plot 6
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
 pch=19,
 col="red")
 
+# calculation for pie chart
 avg1 = mean(vidstats6$europe_views_percentage)
 avg2 = mean(vidstats6$oceania_views_percentage)
 avg3 = mean(vidstats6$asia_views_percentage)
@@ -197,6 +227,8 @@ avg4 = mean(vidstats6$north_america_views_percentage)
 avg5 = mean(vidstats6$south_america_views_percentage)
 avg6 = mean(vidstats6$africa_views_percentage)
 avg7 = mean(vidstats6$antarctica_views_percentage)
+
+# pie chart
 slices <- c(avg1,	avg2,	avg3,	avg4,	avg5,	avg6, avg7)
 lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa","Antarctica")
 pct <- round(slices/sum(slices)*100)
@@ -212,23 +244,28 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
  <b> Total number of downloads <font color="green"> 243 </font></b><br>
 
 ```{r echo=FALSE}
+# run 7
 vidstats7 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-7_video-stats.csv")
 Steps <- vidstats7$step_position
 b <- vidstats7$total_downloads
 c <- vidstats7$total_views
 par(mfrow=c(1,2))
+
+# plot 1
 plot(Steps, b,
 main="Downloads of videos",
 ylab="",
 type="l",
 col="blue")
 
+# plot 2
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
 pch=19,
 col="red")
 
+# calculation for pie chart
 avg1 = mean(vidstats7$europe_views_percentage)
 avg2 = mean(vidstats7$oceania_views_percentage)
 avg3 = mean(vidstats7$asia_views_percentage)
@@ -236,6 +273,8 @@ avg4 = mean(vidstats7$north_america_views_percentage)
 avg5 = mean(vidstats7$south_america_views_percentage)
 avg6 = mean(vidstats7$africa_views_percentage)
 avg7 = mean(vidstats7$antarctica_views_percentage)
+
+# pie chart
 slices <- c(avg1,	avg2,	avg3,	avg4,	avg5,	avg6, avg7)
 lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa","Antarctica")
 pct <- round(slices/sum(slices)*100)
@@ -248,6 +287,8 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 
 ## Key Points
 ```{r echo = FALSE}
+
+# loading dataset
 cse1 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-1_enrolments.csv")
 cse2 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-2_enrolments.csv")
 cse3 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-3_enrolments.csv")
@@ -255,22 +296,40 @@ cse4 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-4_enrolments.cs
 cse5 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-5_enrolments.csv")
 cse6 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-6_enrolments.csv")
 cse7 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-7_enrolments.csv")
-list1 <- list(9607,10307,10392,5788,5268)
-list2 <- list(756, 1054, 848, 508, 243)
+
+# calculating total viewers for each run
+l3 <- sum(vidstats3$total_views)
+l4 <- sum(vidstats4$total_views)
+l5 <- sum(vidstats5$total_views)
+l6 <- sum(vidstats6$total_views)
+l7 <- sum(vidstats7$total_views)
+list1 <- list(l3,l4,l5,l6,l7)
+
+# calculating total downloads for each run
+d3 <- sum(vidstats3$total_downloads)
+d4 <- sum(vidstats4$total_downloads)
+d5 <- sum(vidstats5$total_downloads)
+d6 <- sum(vidstats6$total_downloads)
+d7 <- sum(vidstats7$total_downloads)
+list2 <- list(d3,d4,d5,d6,d7)
+
+# plot for total viewers from run 3-7
 Run <- list(3,4,5,6,7)
-par(mfrow=c(1,2))
+par(mfrow=c(2,2))
 plot(Run, list1,
 main="Total viewers throughout the run",
 ylab="",
 type="l",
 col="blue")
 
+# plot for total downloads throughout the run
 plot(Run, list2,
 main="Total number of downloads throughout each run",
 ylab="",
 type="l",
 col="red")
 
+# calculating total participants
 n1 <- nrow(cse1)
 n2 <- nrow(cse2)
 n3 <- nrow(cse3)
@@ -278,11 +337,11 @@ n4 <- nrow(cse4)
 n5 <- nrow(cse5)
 n6 <- nrow(cse6)
 n7 <- nrow(cse7)
+p <- list(n1,n2,n3,n4,n5,n6,n7)
+q <- list(1,2,3,4,5,6,7)
 
-p <- list(n1,n2,n3,n4,n,n6,n7)
-q <- list(1:7)
-
-plot(Run, list2,
+# plot for participants from run 1 to run 7
+plot(q, p,
 main="Total participants",
 ylab="Participants",
 xlab = "Run",
