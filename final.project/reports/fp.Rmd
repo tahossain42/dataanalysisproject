@@ -60,10 +60,9 @@ Things which is been analysed throughout the project: </br>
 ```{r}
 # run 3, loading data and necessary output
 vidstats3 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-3_video-stats.csv")
-tv <- sum(vidstats3$viewed_onehundred_percent)
 Steps <- vidstats3$step_position
 b <- vidstats3$total_downloads
-c <- vidstats3$total_views
+c <- vidstats3$viewed_onehundred_percent
 
 # plot 1
 par(mfrow=c(1,2))
@@ -77,7 +76,7 @@ col="blue")
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
-pch=19,
+type="l",
 col="red")
 
 # calculation for pie chart
@@ -109,7 +108,7 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 vidstats4 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-4_video-stats.csv")
 Steps <- vidstats4$step_position
 b <- vidstats4$total_downloads
-c <- vidstats4$total_views
+c <- vidstats4$viewed_onehundred_percent
 
 # plot 1
 par(mfrow=c(1,2))
@@ -123,7 +122,7 @@ col="blue")
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
-pch=19,
+type="l",
 col="red")
 
 # calculation for pie chart
@@ -156,7 +155,7 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 vidstats5 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-5_video-stats.csv")
 Steps <- vidstats5$step_position
 b <- vidstats5$total_downloads
-c <- vidstats5$total_views
+c <- vidstats5$viewed_onehundred_percent
 par(mfrow=c(1,2))
 
 # plot 1
@@ -170,7 +169,7 @@ col="blue")
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
-pch=19,
+type="l",
 col="red")
 
 # calculation for pie chart
@@ -202,21 +201,21 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 vidstats6 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-6_video-stats.csv")
 Steps <- vidstats6$step_position
 b <- vidstats6$total_downloads
-c <- vidstats6$total_views
+c <- vidstats6$viewed_onehundred_percent
 par(mfrow=c(1,2))
 
-# plot 6
+# plot 1
 plot(Steps, b,
 main="Downloads of videos",
 ylab="",
 type="l",
 col="blue")
 
-#plot 6
+#plot 2
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
-pch=19,
+type="l",
 col="red")
 
 # calculation for pie chart
@@ -248,7 +247,7 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 vidstats7 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-7_video-stats.csv")
 Steps <- vidstats7$step_position
 b <- vidstats7$total_downloads
-c <- vidstats7$total_views
+c <- vidstats7$viewed_onehundred_percent
 par(mfrow=c(1,2))
 
 # plot 1
@@ -262,7 +261,7 @@ col="blue")
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
-pch=19,
+type="l",
 col="red")
 
 # calculation for pie chart
@@ -286,6 +285,7 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 ```
 
 ## Key Points
+
 ```{r echo = FALSE}
 
 # loading dataset
@@ -315,7 +315,7 @@ list2 <- list(d3,d4,d5,d6,d7)
 
 # plot for total viewers from run 3-7
 Run <- list(3,4,5,6,7)
-par(mfrow=c(2,2))
+par(mfrow=c(1,2))
 plot(Run, list1,
 main="Total viewers throughout the run",
 ylab="",
