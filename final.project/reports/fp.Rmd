@@ -73,13 +73,21 @@ ylab="",
 type="l",
 col="red")
 
-slices <- c(59.59,	4.12,	20.21,	6.69,	2.96,	5.79) 
-lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa")
+avg1 = mean(vidstats3$europe_views_percentage)
+avg2 = mean(vidstats3$oceania_views_percentage)
+avg3 = mean(vidstats3$asia_views_percentage)
+avg4 = mean(vidstats3$north_america_views_percentage)
+avg5 = mean(vidstats3$south_america_views_percentage)
+avg6 = mean(vidstats3$africa_views_percentage)
+avg7 = mean(vidstats3$antarctica_views_percentage)
+slices <- c(avg1,	avg2,	avg3,	avg4,	avg5,	avg6, avg7)
+lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa","Antarctica")
 pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
 pie(slices,labels = lbls, col=rainbow(length(lbls)),
    main="Pie Chart of Countries")
+
 
 ```
  
@@ -106,8 +114,15 @@ ylab="",
 type="l",
 col="red")
 
-slices <- c(59.59,	4.12,	20.21,	6.69,	2.96,	5.79) 
-lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa")
+avg1 = mean(vidstats4$europe_views_percentage)
+avg2 = mean(vidstats4$oceania_views_percentage)
+avg3 = mean(vidstats4$asia_views_percentage)
+avg4 = mean(vidstats4$north_america_views_percentage)
+avg5 = mean(vidstats4$south_america_views_percentage)
+avg6 = mean(vidstats4$africa_views_percentage)
+avg7 = mean(vidstats4$antarctica_views_percentage)
+slices <- c(avg1,	avg2,	avg3,	avg4,	avg5,	avg6, avg7)
+lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa","Antarctica") 
 pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
@@ -138,8 +153,15 @@ ylab="",
 type="l",
 col="red")
 
-slices <- c(59.59,	4.12,	20.21,	6.69,	2.96,	5.79) 
-lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa")
+avg1 = mean(vidstats5$europe_views_percentage)
+avg2 = mean(vidstats5$oceania_views_percentage)
+avg3 = mean(vidstats5$asia_views_percentage)
+avg4 = mean(vidstats5$north_america_views_percentage)
+avg5 = mean(vidstats5$south_america_views_percentage)
+avg6 = mean(vidstats5$africa_views_percentage)
+avg7 = mean(vidstats5$antarctica_views_percentage)
+slices <- c(avg1,	avg2,	avg3,	avg4,	avg5,	avg6, avg7)
+lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa","Antarctica")
 pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
@@ -170,8 +192,15 @@ ylab="",
 type="l",
 col="red")
 
-slices <- c(59.59,	4.12,	20.21,	6.69,	2.96,	5.79) 
-lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa")
+avg1 = mean(vidstats6$europe_views_percentage)
+avg2 = mean(vidstats6$oceania_views_percentage)
+avg3 = mean(vidstats6$asia_views_percentage)
+avg4 = mean(vidstats6$north_america_views_percentage)
+avg5 = mean(vidstats6$south_america_views_percentage)
+avg6 = mean(vidstats6$africa_views_percentage)
+avg7 = mean(vidstats6$antarctica_views_percentage)
+slices <- c(avg1,	avg2,	avg3,	avg4,	avg5,	avg6, avg7)
+lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa","Antarctica")
 pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
@@ -204,8 +233,15 @@ ylab="",
 type="l",
 col="red")
 
-slices <- c(59.59,	4.12,	20.21,	6.69,	2.96,	5.79) 
-lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa")
+avg1 = mean(vidstats7$europe_views_percentage)
+avg2 = mean(vidstats7$oceania_views_percentage)
+avg3 = mean(vidstats7$asia_views_percentage)
+avg4 = mean(vidstats7$north_america_views_percentage)
+avg5 = mean(vidstats7$south_america_views_percentage)
+avg6 = mean(vidstats7$africa_views_percentage)
+avg7 = mean(vidstats7$antarctica_views_percentage)
+slices <- c(avg1,	avg2,	avg3,	avg4,	avg5,	avg6, avg7)
+lbls <- c("Europe", "Ocenia", "Asia", "North America", "South America", "Africa","Antarctica")
 pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
