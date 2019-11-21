@@ -70,7 +70,7 @@ col="blue")
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
-type="l",
+pch=19,
 col="red")
 
 avg1 = mean(vidstats3$europe_views_percentage)
@@ -86,7 +86,7 @@ pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
 pie(slices,labels = lbls, col=rainbow(length(lbls)),
-   main="Pie Chart of Countries")
+   main="Participants in each continent")
 
 
 ```
@@ -111,7 +111,7 @@ col="blue")
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
-type="l",
+pch=19,
 col="red")
 
 avg1 = mean(vidstats4$europe_views_percentage)
@@ -127,7 +127,7 @@ pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
 pie(slices,labels = lbls, col=rainbow(length(lbls)),
-   main="Pie Chart of Countries")
+   main="Participants in each continent")
 ```
 
 ## Run 5
@@ -150,7 +150,7 @@ col="blue")
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
-type="l",
+pch=19,
 col="red")
 
 avg1 = mean(vidstats5$europe_views_percentage)
@@ -166,7 +166,7 @@ pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
 pie(slices,labels = lbls, col=rainbow(length(lbls)),
-   main="Pie Chart of Countries")
+   main="Participants in each continent")
 ```
 
 ## Run 6
@@ -189,7 +189,7 @@ col="blue")
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
-type="l",
+pch=19,
 col="red")
 
 avg1 = mean(vidstats6$europe_views_percentage)
@@ -205,7 +205,7 @@ pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
 pie(slices,labels = lbls, col=rainbow(length(lbls)),
-   main="Pie Chart of Countries")
+   main="Participants in each continent")
 
 
 ```
@@ -230,7 +230,7 @@ col="blue")
 plot(Steps, c,
 main="Total views of videos",
 ylab="",
-type="l",
+pch=19,
 col="red")
 
 avg1 = mean(vidstats7$europe_views_percentage)
@@ -246,7 +246,7 @@ pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
 pie(slices,labels = lbls, col=rainbow(length(lbls)),
-   main="Pie Chart of Countries")
+   main="Participants in each continent")
 
 ```
 
