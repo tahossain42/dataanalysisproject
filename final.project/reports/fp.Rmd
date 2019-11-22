@@ -54,7 +54,7 @@ Things which is been analysed throughout the project: </br>
   
 ## Run 3
 
- <b> Total number of views is <font color="green"> 9607 </font></b> <br>
+ <b> Total number of views is <font color="green"> 732 </font></b> <br>
  <b> Total number of downloads <font color="green"> 756 </font></b><br>
 
 ```{r}
@@ -100,7 +100,7 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
  
 ## Run 4
 
-<b> Total number of views is <font color="green"> 10307 </font></b> <br>
+<b> Total number of views is <font color="green"> 720 </font></b> <br>
  <b> Total number of downloads <font color="green"> 1054 </font></b><br>
  
 ```{r}
@@ -146,7 +146,7 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 
 ## Run 5
 
-<b> Total number of views is <font color="green"> 10392 </font></b> <br>
+<b> Total number of views is <font color="green"> 787 </font></b> <br>
  <b> Total number of downloads <font color="green"> 848 </font></b><br>
  
 ```{r echo=FALSE}
@@ -193,7 +193,7 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 
 ## Run 6
 
-<b> Total number of views is <font color="green"> 5788 </font></b> <br>
+<b> Total number of views is <font color="green"> 753 </font></b> <br>
  <b> Total number of downloads <font color="green"> 508 </font></b><br>
  
 ```{r echo=FALSE}
@@ -239,7 +239,7 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 
 ## Run 7
 
-<b> Total number of views is <font color="green"> 5268 </font></b> <br>
+<b> Total number of views is <font color="green"> 723 </font></b> <br>
  <b> Total number of downloads <font color="green"> 243 </font></b><br>
 
 ```{r echo=FALSE}
@@ -298,11 +298,11 @@ cse6 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-6_enrolments.cs
 cse7 <- read.csv("~/Downloads/mooc-dataset-201920/cyber-security-7_enrolments.csv")
 
 # calculating total viewers for each run
-l3 <- sum(vidstats3$total_views)
-l4 <- sum(vidstats4$total_views)
-l5 <- sum(vidstats5$total_views)
-l6 <- sum(vidstats6$total_views)
-l7 <- sum(vidstats7$total_views)
+l3 <- sum(vidstats3$viewed_onehundred_percent)
+l4 <- sum(vidstats4$viewed_onehundred_percent)
+l5 <- sum(vidstats5$viewed_onehundred_percent)
+l6 <- sum(vidstats6$viewed_onehundred_percent)
+l7 <- sum(vidstats7$viewed_onehundred_percent)
 list1 <- list(l3,l4,l5,l6,l7)
 
 # calculating total downloads for each run
